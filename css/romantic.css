@@ -1,0 +1,372 @@
+/**
+ * ==============================================================================
+ * VERSION B: CUTE & ROMANTIC
+ * Blush Pink, Peach, Cream, Muted Rose-Gold, Soft Curves & Playful Florals
+ * ==============================================================================
+ */
+
+:root {
+  --color-romantic-bg: #FFF5F7;
+  --color-romantic-card: #FFFFFF;
+  --color-pink-soft: #FDE8ED;
+  --color-pink-blush: #F8B4C0;
+  --color-rose-gold: #B76E79;
+  --color-rose-deep: #9E3D52;
+  --color-rose-accent: #C2185B;
+  --color-peach-light: #FFF0E6;
+  --color-peach-accent: #FFAB91;
+  --color-romantic-dark: #38272A;
+  --color-romantic-muted: #6E5459;
+
+  --font-script-title: "Great Vibes", "Playfair Display", cursive, serif;
+  --font-heading-warm: "Playfair Display", "Georgia", serif;
+  --font-sans-friendly: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body.theme-romantic {
+  background-color: var(--color-romantic-bg);
+  color: var(--color-romantic-dark);
+  font-family: var(--font-sans-friendly);
+  background-image: 
+    radial-gradient(#FAD2DC 1.2px, transparent 1.2px),
+    radial-gradient(#FAD2DC 1.2px, var(--color-romantic-bg) 1.2px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+/* ----------------------------------------------------------------------------
+ * 1. INVITATION FRAME & SOFT SHADOWS
+ * ---------------------------------------------------------------------------- */
+.theme-romantic .invitation-wrapper {
+  background-color: var(--color-romantic-card);
+  box-shadow: 0 10px 40px rgba(183, 110, 121, 0.12);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+@media (min-width: 680px) {
+  .theme-romantic .invitation-wrapper {
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 24px;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+ * 2. ROMANTIC HEADER
+ * ---------------------------------------------------------------------------- */
+.romantic-header {
+  background: linear-gradient(180deg, #FFE4EC 0%, #FFF5F7 100%);
+  padding: 2.25rem 1.25rem 1.25rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.romantic-script-badge {
+  font-family: var(--font-script-title);
+  font-size: 2.2rem;
+  color: var(--color-rose-accent);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.romantic-main-headline {
+  font-family: var(--font-heading-warm);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-rose-deep);
+  margin-bottom: 0.35rem;
+}
+
+.romantic-tagline {
+  font-size: 0.95rem;
+  color: var(--color-romantic-muted);
+  font-weight: 500;
+}
+
+/* ----------------------------------------------------------------------------
+ * 3. WELCOME EXPERIENCE & FRIENDLY WAVE ANIMATION
+ * ---------------------------------------------------------------------------- */
+.romantic-greeting-section {
+  padding: 1.5rem 1rem 1.75rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+
+.romantic-svg-stage {
+  max-width: 440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.romantic-greeting-controls {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-replay-wave {
+  background: #FFF0F5;
+  border: 1px solid var(--color-pink-blush);
+  color: var(--color-rose-deep);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-replay-wave:hover {
+  background: #FCE4EC;
+  border-color: var(--color-rose-gold);
+}
+
+/* ----------------------------------------------------------------------------
+ * 4. COUPLE PRESENTATION & PHOTOS
+ * ---------------------------------------------------------------------------- */
+.romantic-couple-section {
+  padding: 2rem 1.25rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF5F7 100%);
+  text-align: center;
+}
+
+.romantic-couple-names {
+  font-family: var(--font-heading-warm);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-rose-deep);
+  margin-bottom: 0.5rem;
+}
+
+.romantic-date-pill {
+  display: inline-block;
+  background: linear-gradient(135deg, #F8B4C0, #FFAB91);
+  color: #FFFFFF;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 1.25rem;
+  border-radius: 30px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(248, 180, 192, 0.4);
+}
+
+.romantic-photos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  max-width: 460px;
+  margin: 1.5rem auto;
+}
+
+.romantic-photo-card {
+  text-align: center;
+}
+
+.romantic-photo-frame {
+  aspect-ratio: 4/5;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(183, 110, 121, 0.15);
+  border: 3px solid #FFFFFF;
+  background: #FFF0F5;
+  transition: transform var(--transition-smooth);
+}
+
+.romantic-photo-frame:hover {
+  transform: translateY(-4px);
+}
+
+.romantic-photo-name {
+  font-family: var(--font-heading-warm);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-rose-deep);
+  margin-top: 0.75rem;
+}
+
+.romantic-photo-role {
+  font-size: 0.82rem;
+  color: var(--color-rose-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ----------------------------------------------------------------------------
+ * 5. EVENTS TIMELINE (CUTE CARDS)
+ * ---------------------------------------------------------------------------- */
+.romantic-events-section {
+  padding: 2.25rem 1.25rem;
+  background-color: #FFFFFF;
+}
+
+.romantic-section-title {
+  font-family: var(--font-heading-warm);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-rose-deep);
+  text-align: center;
+  margin-bottom: 0.35rem;
+}
+
+.romantic-section-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-romantic-muted);
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.romantic-event-card {
+  background: #FFF9FA;
+  border: 1.5px solid var(--color-pink-soft);
+  border-radius: 20px;
+  padding: 1.75rem 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 16px rgba(183, 110, 121, 0.06);
+  position: relative;
+  text-align: center;
+  transition: transform var(--transition-fast);
+}
+
+.romantic-event-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-pink-blush);
+}
+
+.romantic-event-icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFE4EC, #F8B4C0);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  color: var(--color-rose-deep);
+}
+
+.romantic-badge-time {
+  display: inline-block;
+  background-color: var(--color-peach-light);
+  color: #D84315;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  margin-bottom: 0.6rem;
+}
+
+/* ----------------------------------------------------------------------------
+ * 6. VENUE CARD & GOOGLE MAPS NAVIGATION
+ * ---------------------------------------------------------------------------- */
+.romantic-venue-section {
+  padding: 2.25rem 1.25rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF5F7 100%);
+}
+
+.romantic-venue-card {
+  background: #FFFFFF;
+  border: 2px solid var(--color-pink-blush);
+  border-radius: 24px;
+  padding: 2.25rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(183, 110, 121, 0.1);
+  text-align: center;
+}
+
+.romantic-venue-title {
+  font-family: var(--font-heading-warm);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-rose-deep);
+  margin-bottom: 0.4rem;
+}
+
+.btn-romantic-primary {
+  background: linear-gradient(135deg, #C2185B 0%, #9E3D52 100%);
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 50px;
+  box-shadow: 0 6px 18px rgba(194, 24, 91, 0.3);
+}
+
+.btn-romantic-primary:hover {
+  background: linear-gradient(135deg, #D81B60 0%, #C2185B 100%);
+  box-shadow: 0 8px 22px rgba(194, 24, 91, 0.4);
+}
+
+.btn-romantic-secondary {
+  background: #FFF0F5;
+  color: var(--color-rose-deep);
+  border: 1.5px solid var(--color-pink-blush);
+  border-radius: 50px;
+}
+
+.btn-romantic-secondary:hover {
+  background: #FCE4EC;
+  border-color: var(--color-rose-gold);
+}
+
+/* ----------------------------------------------------------------------------
+ * 7. COUNTDOWN IN ROMANTIC PILLS
+ * ---------------------------------------------------------------------------- */
+.theme-romantic .countdown-unit-box {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-pink-soft);
+  box-shadow: 0 4px 12px rgba(183, 110, 121, 0.08);
+  border-radius: 16px;
+  color: var(--color-rose-deep);
+}
+
+.theme-romantic .countdown-number {
+  color: var(--color-rose-deep);
+  font-family: var(--font-heading-warm);
+}
+
+.theme-romantic .countdown-title {
+  color: var(--color-rose-gold);
+  font-weight: 700;
+}
+
+/* ----------------------------------------------------------------------------
+ * 8. ROMANTIC FOOTER & WHATSAPP RSVP
+ * ---------------------------------------------------------------------------- */
+.romantic-footer {
+  background: linear-gradient(180deg, #FFF5F7 0%, #FFE4EC 100%);
+  padding: 2.75rem 1.25rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--color-pink-blush);
+}
+
+.romantic-footer-closing {
+  font-family: var(--font-heading-warm);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-rose-deep);
+  margin-bottom: 1.5rem;
+}
+
+.btn-whatsapp-rsvp {
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-radius: 50px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.85rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-whatsapp-rsvp:hover {
+  background-color: #20BA5A;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+}

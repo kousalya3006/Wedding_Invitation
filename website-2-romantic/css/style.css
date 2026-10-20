@@ -1,0 +1,572 @@
+/**
+ * ==============================================================================
+ * WEBSITE 2: CUTE & ROMANTIC
+ * Blush Pink, Peach, Cream, Muted Rose-Gold, Soft Curves & Playful Florals
+ * Self-contained stylesheet
+ * ==============================================================================
+ */
+
+:root {
+  --color-romantic-bg: #FFF5F7;
+  --color-romantic-card: #FFFFFF;
+  --color-pink-soft: #FDE8ED;
+  --color-pink-blush: #F8B4C0;
+  --color-rose-gold: #B76E79;
+  --color-rose-deep: #9E3D52;
+  --color-rose-accent: #C2185B;
+  --color-peach-light: #FFF0E6;
+  --color-peach-accent: #FFAB91;
+  --color-romantic-dark: #38272A;
+  --color-romantic-muted: #6E5459;
+
+  --font-script-title: "Great Vibes", "Playfair Display", cursive, serif;
+  --font-heading-warm: "Playfair Display", "Georgia", serif;
+  --font-sans-friendly: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 6px 20px rgba(183, 110, 121, 0.12);
+  --shadow-lg: 0 12px 35px rgba(183, 110, 121, 0.16);
+
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --container-max: 680px;
+  --touch-target-min: 48px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-family: var(--font-sans-friendly);
+  background-color: var(--color-romantic-bg);
+  color: var(--color-romantic-dark);
+  background-image: 
+    radial-gradient(#FAD2DC 1.2px, transparent 1.2px),
+    radial-gradient(#FAD2DC 1.2px, var(--color-romantic-bg) 1.2px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-rose-accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Layout */
+.invitation-wrapper {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--color-romantic-card);
+  box-shadow: 0 10px 40px rgba(183, 110, 121, 0.12);
+  overflow: hidden;
+}
+
+@media (min-width: 680px) {
+  .invitation-wrapper {
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 24px;
+  }
+}
+
+.invitation-section {
+  padding: 2.25rem 1.25rem;
+  position: relative;
+}
+
+/* Header */
+.romantic-header {
+  background: linear-gradient(180deg, #FFE4EC 0%, #FFF5F7 100%);
+  padding: 2.5rem 1.25rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.romantic-script-badge {
+  font-family: var(--font-script-title);
+  font-size: 2.4rem;
+  color: var(--color-rose-accent);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.romantic-main-headline {
+  font-family: var(--font-heading-warm);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-rose-deep);
+  margin-bottom: 0.35rem;
+}
+
+.romantic-tagline {
+  font-size: 0.95rem;
+  color: var(--color-romantic-muted);
+  font-weight: 500;
+}
+
+/* Greeting Animation */
+.romantic-greeting-section {
+  padding: 1.5rem 1rem 1.75rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+
+.romantic-svg-stage {
+  max-width: 440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.romantic-greeting-controls {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-replay-wave {
+  background: #FFF0F5;
+  border: 1px solid var(--color-pink-blush);
+  color: var(--color-rose-deep);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-replay-wave:hover {
+  background: #FCE4EC;
+  border-color: var(--color-rose-gold);
+}
+
+/* Couple Presentation & Photos */
+.romantic-couple-section {
+  padding: 2rem 1.25rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF5F7 100%);
+  text-align: center;
+}
+
+.romantic-couple-names {
+  font-family: var(--font-heading-warm);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-rose-deep);
+  margin-bottom: 0.5rem;
+}
+
+.romantic-date-pill {
+  display: inline-block;
+  background: linear-gradient(135deg, #F8B4C0, #FFAB91);
+  color: #FFFFFF;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 1.25rem;
+  border-radius: 30px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(248, 180, 192, 0.4);
+}
+
+.romantic-photos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  max-width: 500px;
+  margin: 1.5rem auto;
+}
+
+.romantic-photo-card {
+  text-align: center;
+}
+
+.romantic-photo-frame {
+  aspect-ratio: 3/5;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(183, 110, 121, 0.15);
+  border: 3px solid #FFFFFF;
+  background: #FFFFFF;
+  transition: transform var(--transition-smooth);
+  cursor: pointer;
+}
+
+.romantic-photo-frame:hover {
+  transform: translateY(-4px);
+}
+
+.romantic-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.romantic-photo-name {
+  font-family: var(--font-heading-warm);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-rose-deep);
+  margin-top: 0.75rem;
+}
+
+.romantic-photo-role {
+  font-size: 0.82rem;
+  color: var(--color-rose-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Events */
+.romantic-events-section {
+  padding: 2.25rem 1.25rem;
+  background-color: #FFFFFF;
+}
+
+.romantic-section-title {
+  font-family: var(--font-heading-warm);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-rose-deep);
+  text-align: center;
+  margin-bottom: 0.35rem;
+}
+
+.romantic-section-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-romantic-muted);
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.romantic-event-card {
+  background: #FFF9FA;
+  border: 1.5px solid var(--color-pink-soft);
+  border-radius: 20px;
+  padding: 1.75rem 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 16px rgba(183, 110, 121, 0.06);
+  position: relative;
+  text-align: center;
+  transition: transform var(--transition-fast);
+}
+
+.romantic-event-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-pink-blush);
+}
+
+.romantic-event-icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFE4EC, #F8B4C0);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  color: var(--color-rose-deep);
+}
+
+.romantic-badge-time {
+  display: inline-block;
+  background-color: var(--color-peach-light);
+  color: #D84315;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  margin-bottom: 0.6rem;
+}
+
+/* Venue */
+.romantic-venue-section {
+  padding: 2.25rem 1.25rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF5F7 100%);
+}
+
+.romantic-venue-card {
+  background: #FFFFFF;
+  border: 2px solid var(--color-pink-blush);
+  border-radius: 24px;
+  padding: 2.25rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(183, 110, 121, 0.1);
+  text-align: center;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.romantic-venue-title {
+  font-family: var(--font-heading-warm);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-rose-deep);
+  margin-bottom: 0.4rem;
+}
+
+.venue-hall-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  background: #FFF0F5;
+  color: #C2185B;
+  border: 1px solid #F8B4C0;
+}
+
+.venue-address-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  color: #4A3539;
+}
+
+.venue-landmark-note {
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+  font-style: italic;
+  color: #7C6267;
+}
+
+.venue-actions-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+  .venue-actions-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .venue-actions-group .btn {
+    flex: 1;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: var(--touch-target-min);
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-icon-svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.btn-romantic-primary {
+  background: linear-gradient(135deg, #C2185B 0%, #9E3D52 100%);
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 50px;
+  box-shadow: 0 6px 18px rgba(194, 24, 91, 0.3);
+}
+
+.btn-romantic-primary:hover {
+  background: linear-gradient(135deg, #D81B60 0%, #C2185B 100%);
+  box-shadow: 0 8px 22px rgba(194, 24, 91, 0.4);
+}
+
+.btn-romantic-secondary {
+  background: #FFF0F5;
+  color: var(--color-rose-deep);
+  border: 1.5px solid var(--color-pink-blush);
+  border-radius: 50px;
+}
+
+.btn-romantic-secondary:hover {
+  background: #FCE4EC;
+  border-color: var(--color-rose-gold);
+}
+
+.btn.btn-copied {
+  background-color: #2E7D32 !important;
+  color: #FFFFFF !important;
+  border-color: #2E7D32 !important;
+}
+
+/* Countdown */
+.countdown-container {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.countdown-title {
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--color-rose-gold);
+  font-weight: 700;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.countdown-unit-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.5rem;
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-pink-soft);
+  box-shadow: 0 4px 12px rgba(183, 110, 121, 0.08);
+  border-radius: 16px;
+  color: var(--color-rose-deep);
+}
+
+.countdown-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-rose-deep);
+  font-family: var(--font-heading-warm);
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+  opacity: 0.8;
+}
+
+.countdown-message {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-rose-accent);
+}
+
+/* Footer & WhatsApp RSVP */
+.romantic-footer {
+  background: linear-gradient(180deg, #FFF5F7 0%, #FFE4EC 100%);
+  padding: 2.75rem 1.25rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--color-pink-blush);
+}
+
+.romantic-footer-closing {
+  font-family: var(--font-heading-warm);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-rose-deep);
+  margin-bottom: 1.5rem;
+}
+
+.btn-whatsapp-rsvp {
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-radius: 50px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.85rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-whatsapp-rsvp:hover {
+  background-color: #20BA5A;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

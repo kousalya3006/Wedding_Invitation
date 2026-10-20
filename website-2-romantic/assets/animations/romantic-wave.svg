@@ -1,0 +1,269 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 440" width="100%" height="auto" role="img" aria-label="Cute and romantic greeting: Groom in cream suit and Bride in red silk saree warmly waving to guests">
+  <defs>
+    <!-- Romantic Gradients -->
+    <linearGradient id="rBgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0F5"/>
+      <stop offset="60%" stop-color="#FCE4EC"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="rRoseGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F48FB1"/>
+      <stop offset="50%" stop-color="#C2185B"/>
+      <stop offset="100%" stop-color="#880E4F"/>
+    </linearGradient>
+    <linearGradient id="rSareeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A5182B"/>
+      <stop offset="50%" stop-color="#7C0E1C"/>
+      <stop offset="100%" stop-color="#550A13"/>
+    </linearGradient>
+    <linearGradient id="rGoldBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FCE59F"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#AA8215"/>
+    </linearGradient>
+    <linearGradient id="rSuitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7F2"/>
+      <stop offset="60%" stop-color="#EBE3D5"/>
+      <stop offset="100%" stop-color="#D7C9B5"/>
+    </linearGradient>
+    <linearGradient id="rSkinGroom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E0AA80"/>
+      <stop offset="100%" stop-color="#C89167"/>
+    </linearGradient>
+    <linearGradient id="rSkinBride" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8B896"/>
+      <stop offset="100%" stop-color="#D49E78"/>
+    </linearGradient>
+
+    <style>
+      .r-entrance {
+        animation: rPopIn 0.9s cubic-bezier(0.17, 0.89, 0.32, 1.25) forwards;
+      }
+      .waving-arm-bride {
+        transform-origin: 382px 230px;
+        animation: rWave 2.8s ease-in-out 0.6s infinite;
+      }
+      .waving-hand {
+        transform-origin: 405px 185px;
+        animation: rHandFlutter 1.4s ease-in-out infinite alternate;
+      }
+      .floating-heart-1 {
+        animation: rFloat 3.5s ease-in-out infinite;
+      }
+      .floating-heart-2 {
+        animation: rFloat 4s ease-in-out 1s infinite;
+      }
+      .floating-sparkle {
+        animation: rSparkle 2.2s ease-in-out infinite alternate;
+      }
+
+      @keyframes rPopIn {
+        0% { opacity: 0; transform: scale(0.92) translateY(20px); }
+        100% { opacity: 1; transform: scale(1) translateY(0); }
+      }
+      @keyframes rWave {
+        0%, 100% { transform: rotate(0deg); }
+        20% { transform: rotate(-16deg); }
+        40% { transform: rotate(4deg); }
+        60% { transform: rotate(-14deg); }
+        80% { transform: rotate(2deg); }
+      }
+      @keyframes rHandFlutter {
+        0% { transform: rotate(-6deg); }
+        100% { transform: rotate(12deg); }
+      }
+      @keyframes rFloat {
+        0% { transform: translateY(0px) scale(0.9); opacity: 0.7; }
+        50% { transform: translateY(-16px) scale(1.08); opacity: 1; }
+        100% { transform: translateY(0px) scale(0.9); opacity: 0.7; }
+      }
+      @keyframes rSparkle {
+        0% { transform: scale(0.7) rotate(0deg); opacity: 0.4; }
+        100% { transform: scale(1.2) rotate(45deg); opacity: 1; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .r-entrance, .waving-arm-bride, .waving-hand, .floating-heart-1, .floating-heart-2, .floating-sparkle {
+          animation: none !important;
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Romantic Pastel Halo Arch -->
+  <ellipse cx="270" cy="220" rx="200" ry="170" fill="url(#rBgGrad)"/>
+  <ellipse cx="270" cy="220" rx="195" ry="165" fill="none" stroke="#F8BBD0" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Floating Hearts & Sparkles -->
+  <g id="sparkles-hearts">
+    <!-- Heart Left -->
+    <path class="floating-heart-1" d="M 120 160 C 120 150, 110 142, 100 142 C 86 142, 80 154, 100 172 L 100 172 C 120 154, 114 142, 100 142" fill="#F48FB1"/>
+    <!-- Heart Right Top -->
+    <path class="floating-heart-2" d="M 430 110 C 430 98, 418 90, 406 90 C 390 90, 384 104, 406 124 L 406 124 C 428 104, 422 90, 406 90" fill="#EC407A"/>
+    <!-- Golden Sparkles -->
+    <g class="floating-sparkle" transform="translate(140, 100)">
+      <polygon points="10,0 12,7 19,10 12,13 10,20 8,13 1,10 8,7" fill="#FBC02D"/>
+    </g>
+    <g class="floating-sparkle" transform="translate(390, 160)">
+      <polygon points="8,0 10,6 16,8 10,10 8,16 6,10 0,8 6,6" fill="#FBC02D"/>
+    </g>
+    <g class="floating-sparkle" transform="translate(265, 55)">
+      <polygon points="10,0 13,8 20,10 13,12 10,20 7,12 0,10 7,8" fill="#F06292"/>
+    </g>
+  </g>
+
+  <!-- Couple Group -->
+  <g class="r-entrance" id="romantic-couple">
+    
+    <!-- ===============================================================
+         GROOM (LEFT): Cream Formal Suit, Crisp White Shirt, Black Bow Tie
+         =============================================================== -->
+    <g id="r-groom">
+      <!-- Groom Torso / Suit -->
+      <path d="M 148 230 C 148 200, 190 190, 225 190 C 245 190, 258 195, 264 215 L 260 375 C 235 380, 175 380, 152 375 Z" fill="url(#rSuitGrad)"/>
+      
+      <!-- White Shirt V-Neck & Black Bow Tie -->
+      <polygon points="210,190 240,190 225,245" fill="#FFFFFF"/>
+      <g id="r-groom-bow">
+        <polygon points="215,202 235,202 225,210" fill="#212121"/>
+        <polygon points="215,218 235,218 225,210" fill="#212121"/>
+        <circle cx="225" cy="210" r="3" fill="#424242"/>
+      </g>
+
+      <!-- Cream Lapels & Rose Boutonniere -->
+      <path d="M 185 192 L 212 255 L 206 325" fill="none" stroke="#D3C3AD" stroke-width="2.5"/>
+      <path d="M 255 196 L 230 265 L 236 325" fill="none" stroke="#D3C3AD" stroke-width="2.5"/>
+      <!-- Boutonniere (Blush rose on groom lapel) -->
+      <circle cx="198" cy="225" r="4.5" fill="#F48FB1"/>
+      <circle cx="198" cy="225" r="2.5" fill="#EC407A"/>
+      <path d="M 198 230 Q 196 238 193 242" fill="none" stroke="#4CAF50" stroke-width="1.5"/>
+
+      <!-- Groom Left Hand (Relaxed at side) -->
+      <path d="M 150 225 C 138 260, 138 310, 150 345 C 154 355, 162 355, 164 345 C 158 310, 158 265, 168 235 Z" fill="url(#rSuitGrad)"/>
+
+      <!-- Groom Right Arm (Gently behind bride's waist, affectionate posture) -->
+      <path d="M 252 235 Q 275 250 292 265" fill="none" stroke="url(#rSuitGrad)" stroke-width="15" stroke-linecap="round"/>
+
+      <!-- Groom Neck & Head -->
+      <rect x="215" y="172" width="20" height="24" rx="6" fill="url(#rSkinGroom)"/>
+      <ellipse cx="225" cy="148" rx="27" ry="31" fill="url(#rSkinGroom)"/>
+      
+      <!-- Groom Hair (Stylized modern hair) -->
+      <path d="M 197 144 C 195 122, 210 112, 229 112 C 248 112, 256 122, 254 140 C 250 128, 242 122, 227 122 C 210 122, 201 132, 197 144 Z" fill="#221A15"/>
+      
+      <!-- Groom Eyes / Cheerful Expression -->
+      <path d="M 208 141 Q 215 137 221 141" fill="none" stroke="#221A15" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M 230 141 Q 236 137 243 141" fill="none" stroke="#221A15" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="215" cy="147" r="2.5" fill="#221A15"/>
+      <circle cx="237" cy="147" r="2.5" fill="#221A15"/>
+      <!-- Rosy Cheeks -->
+      <ellipse cx="206" cy="154" rx="5" ry="3" fill="#FFAB91" opacity="0.6"/>
+      <ellipse cx="244" cy="154" rx="5" ry="3" fill="#FFAB91" opacity="0.6"/>
+      <!-- Warm Smile -->
+      <path d="M 218 162 Q 226 170 234 162" fill="none" stroke="#7A3928" stroke-width="2.2" stroke-linecap="round"/>
+    </g>
+
+
+    <!-- ===============================================================
+         BRIDE (RIGHT): Deep Red Silk Saree, Gold Zari Borders, Gold Jewellery
+         =============================================================== -->
+    <g id="r-bride">
+      <!-- Bride Saree / Silhouette -->
+      <path d="M 276 215 C 285 195, 305 190, 325 190 C 358 190, 395 200, 395 230 L 390 375 C 365 380, 310 380, 280 375 Z" fill="url(#rSareeGrad)"/>
+
+      <!-- Gold Zari Pallu Draped Gracefully -->
+      <path d="M 368 215 C 340 235, 305 285, 290 340 L 308 350 C 322 300, 355 250, 385 230 Z" fill="url(#rGoldBorder)"/>
+      <circle cx="335" cy="315" r="4" fill="#D4AF37"/> <!-- Waist ornament -->
+
+      <!-- Bride Neck & Head -->
+      <rect x="312" y="172" width="18" height="24" rx="6" fill="url(#rSkinBride)"/>
+      <!-- Gold Necklace (Choker) -->
+      <path d="M 312 186 Q 321 194 330 186" fill="none" stroke="url(#rGoldBorder)" stroke-width="4"/>
+      <circle cx="321" cy="196" r="2.5" fill="#D81B60"/>
+
+      <ellipse cx="321" cy="148" rx="26" ry="29" fill="url(#rSkinBride)"/>
+
+      <!-- Hair Bun with Jasmine Flowers (Gajra) -->
+      <circle cx="350" cy="144" r="17" fill="#1C1412"/>
+      <g id="r-jasmine">
+        <circle cx="356" cy="130" r="3.5" fill="#FFFFFF"/>
+        <circle cx="363" cy="137" r="3.5" fill="#FFFFFF"/>
+        <circle cx="366" cy="146" r="3.5" fill="#FFFFFF"/>
+        <circle cx="362" cy="155" r="3.5" fill="#FFFFFF"/>
+        <circle cx="355" cy="161" r="3.5" fill="#FFFFFF"/>
+      </g>
+
+      <!-- Front Hair, Maang Tikka & Bindi -->
+      <path d="M 296 142 C 299 122, 310 115, 321 115 C 332 115, 343 122, 346 142 C 341 126, 332 122, 321 122 C 310 122, 301 126, 296 142 Z" fill="#1C1412"/>
+      <line x1="321" y1="115" x2="321" y2="130" stroke="url(#rGoldBorder)" stroke-width="1.8"/>
+      <circle cx="321" cy="132" r="2.8" fill="url(#rGoldBorder)"/>
+      <circle cx="321" cy="137" r="2.2" fill="#D81B60"/> <!-- Kumkum / Bindi -->
+
+      <!-- Jhumkas -->
+      <circle cx="296" cy="154" r="2" fill="#D4AF37"/>
+      <circle cx="346" cy="154" r="2" fill="#D4AF37"/>
+
+      <!-- Bride Cheerful Expression -->
+      <path d="M 306 140 Q 312 136 317 140" fill="none" stroke="#221A15" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 326 140 Q 331 136 336 140" fill="none" stroke="#221A15" stroke-width="2" stroke-linecap="round"/>
+      <ellipse cx="312" cy="146" rx="2.6" ry="2.2" fill="#221A15"/>
+      <ellipse cx="331" cy="146" rx="2.6" ry="2.2" fill="#221A15"/>
+      <!-- Rosy Cheeks -->
+      <ellipse cx="304" cy="153" rx="5" ry="3" fill="#F48FB1" opacity="0.6"/>
+      <ellipse cx="338" cy="153" rx="5" ry="3" fill="#F48FB1" opacity="0.6"/>
+      <!-- Happy Radiant Smile -->
+      <path d="M 314 161 Q 321 169 328 161" fill="none" stroke="#C2185B" stroke-width="2.2" stroke-linecap="round"/>
+
+      <!-- Bride Left Hand (Holding wedding flowers / resting gracefully) -->
+      <path d="M 305 245 Q 288 265 285 285" fill="none" stroke="url(#rSareeGrad)" stroke-width="14" stroke-linecap="round"/>
+      <circle cx="282" cy="290" r="5" fill="url(#rSkinBride)"/>
+      <!-- Gold Bangles -->
+      <circle cx="286" cy="282" r="5.5" fill="none" stroke="url(#rGoldBorder)" stroke-width="2"/>
+
+
+      <!-- ===============================================================
+           WAVING ARM & HAND (BRIDE WAVING CHEERFULLY TO GUESTS)
+           Natural articulation pivoting from shoulder and elbow
+           =============================================================== -->
+      <g class="waving-arm-bride" id="arm-wave-container">
+        <!-- Upper Arm (Deep red silk sleeve with gold border) -->
+        <path d="M 378 222 Q 402 208 412 188" fill="none" stroke="url(#rSareeGrad)" stroke-width="15" stroke-linecap="round"/>
+        <!-- Sleeve Gold Zari Cuff -->
+        <path d="M 388 214 Q 402 204 408 194" fill="none" stroke="url(#rGoldBorder)" stroke-width="3"/>
+        
+        <!-- Forearm (Warm golden skin) -->
+        <path d="M 412 188 L 420 155" fill="none" stroke="url(#rSkinBride)" stroke-width="10" stroke-linecap="round"/>
+        <!-- Bangles (Valayal) on Forearm -->
+        <line x1="414" y1="172" x2="422" y2="175" stroke="url(#rGoldBorder)" stroke-width="2"/>
+        <line x1="415" y1="168" x2="423" y2="171" stroke="#C2185B" stroke-width="2"/>
+        <line x1="416" y1="164" x2="424" y2="167" stroke="url(#rGoldBorder)" stroke-width="2"/>
+
+        <!-- Waving Palm & Fingers -->
+        <g class="waving-hand">
+          <ellipse cx="423" cy="146" rx="6" ry="8" fill="url(#rSkinBride)" transform="rotate(-15, 423, 146)"/>
+          <!-- Fingers spread in friendly wave -->
+          <line x1="421" y1="140" x2="418" y2="128" stroke="url(#rSkinBride)" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="424" y1="139" x2="424" y2="125" stroke="url(#rSkinBride)" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="427" y1="140" x2="429" y2="127" stroke="url(#rSkinBride)" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="429" y1="143" x2="434" y2="132" stroke="url(#rSkinBride)" stroke-width="2.2" stroke-linecap="round"/>
+          <!-- Mehendi flower motif on palm -->
+          <circle cx="423" cy="146" r="1.5" fill="#880E4F"/>
+        </g>
+      </g>
+
+    </g> <!-- end r-bride -->
+
+  </g> <!-- end romantic-couple -->
+
+  <!-- Bottom Pastel Floral Garlands -->
+  <g id="bottom-garland" opacity="0.85">
+    <path d="M 80 400 Q 270 425 460 400" fill="none" stroke="#F8BBD0" stroke-width="2"/>
+    <circle cx="150" cy="405" r="6" fill="#F48FB1"/>
+    <circle cx="210" cy="410" r="5" fill="#FFCDD2"/>
+    <circle cx="270" cy="412" r="7" fill="#F06292"/>
+    <circle cx="330" cy="410" r="5" fill="#FFCDD2"/>
+    <circle cx="390" cy="405" r="6" fill="#F48FB1"/>
+  </g>
+</svg>

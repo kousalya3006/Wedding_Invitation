@@ -1,0 +1,393 @@
+/**
+ * ==============================================================================
+ * COMMON BASE STYLESHEET
+ * Universal design tokens, resets, typography foundations, accessible controls,
+ * shared components (countdown, maps buttons, toast, photo fallbacks).
+ * ==============================================================================
+ */
+
+/* ----------------------------------------------------------------------------
+ * 1. CSS VARIABLES & SYSTEM TOKENS
+ * ---------------------------------------------------------------------------- */
+:root {
+  /* System Typography Fallbacks */
+  --font-serif-royal: "Playfair Display", "Cinzel", "Georgia", "Times New Roman", serif;
+  --font-serif-editorial: "Bodoni Moda", "Didot", "Cormorant Garamond", "Georgia", serif;
+  --font-script-romantic: "Great Vibes", "Alex Brush", "Playfair Display", cursive, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans-rounded: "Nunito", "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Universal Spacing Scale */
+  --space-2xs: 0.25rem; /* 4px */
+  --space-xs: 0.5rem;   /* 8px */
+  --space-sm: 0.75rem;  /* 12px */
+  --space-md: 1rem;     /* 16px */
+  --space-lg: 1.5rem;   /* 24px */
+  --space-xl: 2rem;     /* 32px */
+  --space-2xl: 3rem;    /* 48px */
+  --space-3xl: 4.5rem;  /* 72px */
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-gold: 0 6px 20px rgba(197, 155, 39, 0.25);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-gentle: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-narrow: 480px;
+  --container-max: 680px;
+  --touch-target-min: 48px;
+}
+
+/* ----------------------------------------------------------------------------
+ * 2. MODERN ACCESSIBLE CSS RESET
+ * ---------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Accessible Screen Reader Only Text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus Visible for Keyboard Accessibility */
+:focus-visible {
+  outline: 3px solid #D4AF37;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ----------------------------------------------------------------------------
+ * 3. LAYOUT CONTAINERS
+ * ---------------------------------------------------------------------------- */
+.invitation-wrapper {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+.invitation-header,
+.invitation-main,
+.invitation-footer {
+  width: 100%;
+}
+
+.invitation-section {
+  padding: var(--space-2xl) var(--space-lg);
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .invitation-section {
+    padding: var(--space-xl) var(--space-md);
+  }
+}
+
+/* ----------------------------------------------------------------------------
+ * 4. SHARED BUTTONS & TOUCH CONTROLS
+ * ---------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-icon-svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+/* Button Copied State Animation */
+.btn.btn-copied {
+  background-color: #2E7D32 !important;
+  color: #FFFFFF !important;
+  border-color: #2E7D32 !important;
+}
+
+/* ----------------------------------------------------------------------------
+ * 5. VENUE & GOOGLE MAPS CARD COMPONENTS
+ * ---------------------------------------------------------------------------- */
+.venue-card {
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+}
+
+.venue-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.venue-hall-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: var(--space-md);
+}
+
+.venue-address-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.venue-landmark-note {
+  font-size: 0.9rem;
+  margin-bottom: var(--space-lg);
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.venue-actions-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+  .venue-actions-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .venue-actions-group .btn {
+    flex: 1;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+ * 6. COUNTDOWN TIMER COMPONENT
+ * ---------------------------------------------------------------------------- */
+.countdown-container {
+  margin: var(--space-xl) auto 0;
+  text-align: center;
+  width: 100%;
+}
+
+.countdown-title {
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  opacity: 0.85;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xs);
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.countdown-unit-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.5rem;
+  border-radius: 12px;
+}
+
+.countdown-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+  opacity: 0.8;
+}
+
+.countdown-message {
+  margin-top: var(--space-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ----------------------------------------------------------------------------
+ * 7. EVENT TIMELINE TILES
+ * ---------------------------------------------------------------------------- */
+.events-schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.event-card {
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: 16px;
+  position: relative;
+  text-align: center;
+}
+
+.event-time-badge {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: 30px;
+  margin-bottom: var(--space-sm);
+}
+
+.event-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.event-card-date {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.event-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* ----------------------------------------------------------------------------
+ * 8. PHOTO FALLBACK CONTAINER
+ * Stylized placeholder when images are loading or pending user upload
+ * ---------------------------------------------------------------------------- */
+.photo-frame {
+  position: relative;
+  overflow: hidden;
+  background-color: #F7F5F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.photo-fallback .fallback-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: var(--space-xs);
+  opacity: 0.75;
+}
+
+/* ----------------------------------------------------------------------------
+ * 9. REDUCED MOTION ACCESSIBILITY OVERRIDES
+ * Respects user OS preference for reduced motion
+ * ---------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="auto">
+  <defs>
+    <linearGradient id="goldM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE59F"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#997314"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#goldM)" stroke-width="1.2">
+    <circle cx="60" cy="60" r="54"/>
+    <circle cx="60" cy="60" r="46" stroke-dasharray="2,2"/>
+    <circle cx="60" cy="60" r="38"/>
+    <circle cx="60" cy="60" r="26"/>
+    <circle cx="60" cy="60" r="14"/>
+    <circle cx="60" cy="60" r="4" fill="url(#goldM)"/>
+    <!-- Petals -->
+    <path d="M60 6 C66 22, 66 38, 60 46 C54 38, 54 22, 60 6 Z" fill="url(#goldM)" opacity="0.4"/>
+    <path d="M60 114 C66 98, 66 82, 60 74 C54 82, 54 98, 60 114 Z" fill="url(#goldM)" opacity="0.4"/>
+    <path d="M6 60 C22 66, 38 66, 46 60 C38 54, 22 54, 6 60 Z" fill="url(#goldM)" opacity="0.4"/>
+    <path d="M114 60 C98 66, 82 66, 74 60 C82 54, 98 54, 114 60 Z" fill="url(#goldM)" opacity="0.4"/>
+    <!-- Diagonal Petals -->
+    <g transform="rotate(45, 60, 60)">
+      <path d="M60 6 C66 22, 66 38, 60 46 C54 38, 54 22, 60 6 Z" fill="url(#goldM)" opacity="0.3"/>
+      <path d="M60 114 C66 98, 66 82, 60 74 C54 82, 54 98, 60 114 Z" fill="url(#goldM)" opacity="0.3"/>
+      <path d="M6 60 C22 66, 38 66, 46 60 C38 54, 22 54, 6 60 Z" fill="url(#goldM)" opacity="0.3"/>
+      <path d="M114 60 C98 66, 82 66, 74 60 C82 54, 98 54, 114 60 Z" fill="url(#goldM)" opacity="0.3"/>
+    </g>
+  </g>
+</svg>

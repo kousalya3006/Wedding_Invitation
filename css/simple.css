@@ -1,0 +1,362 @@
+/**
+ * ==============================================================================
+ * VERSION C: SIMPLE & MINIMAL
+ * Editorial Elegance, Generous Whitespace, High-Contrast Typography,
+ * Prominent Original Photographic Showcase, Pure Simplicity.
+ * ==============================================================================
+ */
+
+:root {
+  --color-minimal-bg: #FBFBFA;
+  --color-minimal-surface: #FFFFFF;
+  --color-black: #111111;
+  --color-charcoal-dark: #222222;
+  --color-charcoal-medium: #4B4B4B;
+  --color-gray-subtle: #8A8A8A;
+  --color-border-hairline: #E5E5E0;
+  --color-crimson-accent: #7A0C1E; /* Restrained accent from Bride's saree */
+  --color-cream-suit-accent: #E8E2D5; /* Subtle tone from Groom's formal suit */
+
+  --font-serif-display: "Bodoni Moda", "Didot", "Playfair Display", "Georgia", serif;
+  --font-sans-clean: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body.theme-simple {
+  background-color: var(--color-minimal-bg);
+  color: var(--color-black);
+  font-family: var(--font-sans-clean);
+  line-height: 1.65;
+}
+
+/* ----------------------------------------------------------------------------
+ * 1. EDITORIAL CONTAINER & WHITESPACE
+ * ---------------------------------------------------------------------------- */
+.theme-simple .invitation-wrapper {
+  background-color: var(--color-minimal-surface);
+  border-left: 1px solid var(--color-border-hairline);
+  border-right: 1px solid var(--color-border-hairline);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04);
+}
+
+@media (min-width: 680px) {
+  .theme-simple .invitation-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+ * 2. EDITORIAL MONOGRAM & HEADER
+ * ---------------------------------------------------------------------------- */
+.simple-header {
+  padding: 3.5rem 1.5rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border-hairline);
+}
+
+.simple-monogram {
+  font-family: var(--font-serif-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--color-crimson-accent);
+  margin-bottom: 1.5rem;
+}
+
+.simple-names-title {
+  font-family: var(--font-serif-display);
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  color: var(--color-black);
+  margin-bottom: 1rem;
+}
+
+.simple-date-line {
+  font-family: var(--font-sans-clean);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-charcoal-medium);
+}
+
+/* ----------------------------------------------------------------------------
+ * 3. UNOBTRUSIVE GENTLE UPWARD ENTRANCE
+ * ---------------------------------------------------------------------------- */
+.simple-fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: simpleFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.simple-fade-delay-1 { animation-delay: 0.1s; }
+.simple-fade-delay-2 { animation-delay: 0.25s; }
+.simple-fade-delay-3 { animation-delay: 0.4s; }
+
+@keyframes simpleFadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------------------------------------------------------------------
+ * 4. PROMINENT ORIGINAL PHOTOGRAPHS EXHIBITION
+ * ---------------------------------------------------------------------------- */
+.simple-gallery-section {
+  padding: 2.5rem 1.5rem;
+  background-color: var(--color-minimal-surface);
+}
+
+.simple-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.simple-portrait-frame {
+  aspect-ratio: 4/5;
+  background-color: #F5F5F0;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid var(--color-border-hairline);
+  position: relative;
+}
+
+.simple-portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.simple-portrait-frame:hover img {
+  transform: scale(1.02);
+}
+
+.simple-portrait-caption {
+  margin-top: 0.85rem;
+  text-align: center;
+}
+
+.simple-portrait-caption .name {
+  font-family: var(--font-serif-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.simple-portrait-caption .role {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gray-subtle);
+  margin-top: 0.2rem;
+}
+
+/* ----------------------------------------------------------------------------
+ * 5. INVITATION STATEMENT
+ * ---------------------------------------------------------------------------- */
+.simple-statement-section {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--color-border-hairline);
+}
+
+.simple-statement-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-charcoal-dark);
+}
+
+/* ----------------------------------------------------------------------------
+ * 6. TIMELINE & EVENTS SCHEDULE
+ * ---------------------------------------------------------------------------- */
+.simple-schedule-section {
+  padding: 3rem 1.5rem;
+  border-bottom: 1px solid var(--color-border-hairline);
+}
+
+.simple-section-tag {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-crimson-accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.simple-section-title {
+  font-family: var(--font-serif-display);
+  font-size: 1.85rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.simple-event-row {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-border-hairline);
+}
+
+@media (min-width: 480px) {
+  .simple-event-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .simple-event-left {
+    flex: 1;
+  }
+  .simple-event-right {
+    text-align: right;
+  }
+}
+
+.simple-event-title {
+  font-family: var(--font-serif-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 0.25rem;
+}
+
+.simple-event-date {
+  font-size: 0.95rem;
+  color: var(--color-charcoal-medium);
+}
+
+.simple-event-time {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-crimson-accent);
+  margin-top: 0.25rem;
+}
+
+.simple-event-desc {
+  font-size: 0.9rem;
+  color: var(--color-gray-subtle);
+  margin-top: 0.4rem;
+  line-height: 1.5;
+}
+
+/* ----------------------------------------------------------------------------
+ * 7. VENUE & GOOGLE MAPS NAVIGATION (CLEAN MINIMAL)
+ * ---------------------------------------------------------------------------- */
+.simple-venue-section {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border-hairline);
+}
+
+.simple-venue-card {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.simple-venue-title {
+  font-family: var(--font-serif-display);
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 0.35rem;
+}
+
+.simple-venue-hall {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-crimson-accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.simple-address-block {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--color-charcoal-medium);
+  margin-bottom: 1.75rem;
+}
+
+.btn-simple-dark {
+  background-color: var(--color-black);
+  color: #FFFFFF;
+  border: 1px solid var(--color-black);
+  border-radius: 4px;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.btn-simple-dark:hover {
+  background-color: var(--color-crimson-accent);
+  border-color: var(--color-crimson-accent);
+}
+
+.btn-simple-outline {
+  background-color: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  border-radius: 4px;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.btn-simple-outline:hover {
+  background-color: #F5F5F0;
+}
+
+/* ----------------------------------------------------------------------------
+ * 8. SIMPLE MINIMAL COUNTDOWN
+ * ---------------------------------------------------------------------------- */
+.theme-simple .countdown-unit-box {
+  background-color: transparent;
+  border: 1px solid var(--color-border-hairline);
+  border-radius: 4px;
+  color: var(--color-black);
+}
+
+.theme-simple .countdown-number {
+  font-family: var(--font-serif-display);
+  font-weight: 400;
+  font-size: 1.85rem;
+}
+
+.theme-simple .countdown-title {
+  color: var(--color-gray-subtle);
+  letter-spacing: 0.18em;
+}
+
+/* ----------------------------------------------------------------------------
+ * 9. FOOTER
+ * ---------------------------------------------------------------------------- */
+.simple-footer {
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+  background-color: var(--color-minimal-surface);
+}
+
+.simple-footer-closing {
+  font-family: var(--font-serif-display);
+  font-size: 1.35rem;
+  color: var(--color-black);
+  margin-bottom: 1.5rem;
+}
+
+.simple-contact-note {
+  font-size: 0.9rem;
+  color: var(--color-gray-subtle);
+  margin-top: 0.5rem;
+}

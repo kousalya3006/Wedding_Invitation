@@ -1,0 +1,369 @@
+/**
+ * ==============================================================================
+ * VERSION A: TRADITIONAL & ELEGANT
+ * Imperial Maroon, Warm Ivory, Antique Gold, Ornate Indian Borders
+ * ==============================================================================
+ */
+
+:root {
+  --color-maroon-deep: #5A0B15;
+  --color-maroon-primary: #6B0F1A;
+  --color-maroon-rich: #8B1425;
+  --color-ivory-bg: #FAF6EE;
+  --color-ivory-card: #FFFDF9;
+  --color-cream-tint: #F3EBDD;
+  --color-gold-bright: #F5D77F;
+  --color-gold-antique: #C59B27;
+  --color-gold-dark: #8C6712;
+  --color-charcoal: #2A1F1D;
+  --color-text-muted: #645350;
+
+  --font-serif-heading: "Playfair Display", "Cinzel", "Georgia", "Times New Roman", serif;
+  --font-serif-body: "Georgia", "Cambria", serif;
+  --font-sans-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body.theme-traditional {
+  background-color: var(--color-ivory-bg);
+  color: var(--color-charcoal);
+  font-family: var(--font-serif-body);
+  background-image: 
+    radial-gradient(var(--color-cream-tint) 1px, transparent 1px),
+    radial-gradient(var(--color-cream-tint) 1px, var(--color-ivory-bg) 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* ----------------------------------------------------------------------------
+ * 1. INVITATION FRAME & ROYAL BORDERS
+ * ---------------------------------------------------------------------------- */
+.theme-traditional .invitation-wrapper {
+  background-color: var(--color-ivory-card);
+  box-shadow: 0 8px 30px rgba(90, 11, 21, 0.08), 0 0 0 1px rgba(197, 155, 39, 0.25);
+  border-left: 5px solid var(--color-maroon-primary);
+  border-right: 5px solid var(--color-maroon-primary);
+}
+
+/* Ornate Header Arch */
+.traditional-top-arch {
+  background: linear-gradient(180deg, var(--color-maroon-deep) 0%, var(--color-maroon-primary) 100%);
+  color: var(--color-gold-bright);
+  padding: 1.5rem 1rem 1.25rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 3px solid var(--color-gold-antique);
+}
+
+.traditional-invocation {
+  font-family: var(--font-serif-heading);
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--color-gold-bright);
+  margin-bottom: 0.35rem;
+}
+
+.traditional-sub-invocation {
+  font-size: 0.85rem;
+  font-family: var(--font-sans-ui);
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+  color: #FFF2D1;
+}
+
+/* ----------------------------------------------------------------------------
+ * 2. WELCOME EXPERIENCE & NAMASTE ANIMATION
+ * ---------------------------------------------------------------------------- */
+.traditional-greeting-section {
+  padding: 1.75rem 1rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(180deg, #FFFDF9 0%, #FAF5EA 100%);
+  border-bottom: 1px solid rgba(197, 155, 39, 0.2);
+}
+
+.traditional-svg-stage {
+  max-width: 440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.traditional-greeting-controls {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-replay-greeting {
+  background: transparent;
+  border: 1px solid var(--color-gold-antique);
+  color: var(--color-maroon-primary);
+  font-size: 0.82rem;
+  font-family: var(--font-sans-ui);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-replay-greeting:hover {
+  background-color: var(--color-cream-tint);
+  border-color: var(--color-gold-dark);
+}
+
+.greeting-status-badge {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans-ui);
+  font-style: italic;
+}
+
+/* ----------------------------------------------------------------------------
+ * 3. NAMES & COUPLE PRESENTATION
+ * ---------------------------------------------------------------------------- */
+.traditional-names-section {
+  text-align: center;
+  padding: 2.25rem 1.25rem;
+  background-color: var(--color-ivory-card);
+}
+
+.traditional-salutation {
+  font-family: var(--font-serif-heading);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin-bottom: 1.25rem;
+}
+
+.traditional-couple-row {
+  margin: 1.5rem 0;
+}
+
+.couple-member-card {
+  margin: 1rem 0;
+}
+
+.couple-name-title {
+  font-family: var(--font-serif-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-maroon-primary);
+  line-height: 1.2;
+}
+
+.couple-parents-text {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-top: 0.35rem;
+  font-style: italic;
+}
+
+.traditional-ampersand-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.75rem auto;
+  max-width: 280px;
+}
+
+.traditional-ampersand-divider .line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-antique), transparent);
+}
+
+.traditional-ampersand-divider .ampersand {
+  font-family: var(--font-serif-heading);
+  font-size: 1.6rem;
+  color: var(--color-gold-antique);
+  font-style: italic;
+}
+
+/* ----------------------------------------------------------------------------
+ * 4. EVENT DETAILS & SUBHA MUHURTHAM
+ * ---------------------------------------------------------------------------- */
+.traditional-events-section {
+  padding: 2.25rem 1.25rem;
+  background-color: #FAF5EA;
+  border-top: 1px solid rgba(197, 155, 39, 0.2);
+  border-bottom: 1px solid rgba(197, 155, 39, 0.2);
+}
+
+.section-ornate-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.section-ornate-title {
+  font-family: var(--font-serif-heading);
+  font-size: 1.65rem;
+  color: var(--color-maroon-primary);
+  margin-bottom: 0.4rem;
+}
+
+.section-ornate-subtitle {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  font-family: var(--font-sans-ui);
+}
+
+.traditional-card {
+  background-color: #FFFDF9;
+  border: 1px solid rgba(197, 155, 39, 0.35);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(90, 11, 21, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.traditional-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-maroon-primary), var(--color-gold-antique), var(--color-maroon-primary));
+}
+
+.traditional-badge-muhurtham {
+  background: linear-gradient(135deg, var(--color-maroon-primary), var(--color-maroon-deep));
+  color: var(--color-gold-bright);
+  border: 1px solid var(--color-gold-antique);
+  font-family: var(--font-sans-ui);
+}
+
+.traditional-badge-reception {
+  background: var(--color-cream-tint);
+  color: var(--color-maroon-primary);
+  border: 1px solid rgba(197, 155, 39, 0.4);
+  font-family: var(--font-sans-ui);
+}
+
+/* ----------------------------------------------------------------------------
+ * 5. VENUE & GOOGLE MAPS NAVIGATION
+ * ---------------------------------------------------------------------------- */
+.traditional-venue-section {
+  padding: 2.25rem 1.25rem;
+  background-color: var(--color-ivory-card);
+}
+
+.traditional-venue-card {
+  border: 2px solid var(--color-gold-antique);
+  background: #FFFDF9;
+  padding: 2rem 1.25rem;
+  border-radius: 14px;
+  position: relative;
+}
+
+.traditional-venue-card .corner-ornament {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-gold-antique);
+}
+
+.traditional-venue-card .corner-tl { top: 6px; left: 6px; border-right: 0; border-bottom: 0; }
+.traditional-venue-card .corner-tr { top: 6px; right: 6px; border-left: 0; border-bottom: 0; }
+.traditional-venue-card .corner-bl { bottom: 6px; left: 6px; border-right: 0; border-top: 0; }
+.traditional-venue-card .corner-br { bottom: 6px; right: 6px; border-left: 0; border-top: 0; }
+
+.traditional-venue-title {
+  font-family: var(--font-serif-heading);
+  font-size: 1.5rem;
+  color: var(--color-maroon-primary);
+  margin-bottom: 0.5rem;
+}
+
+.btn-traditional-primary {
+  background: linear-gradient(135deg, var(--color-maroon-primary) 0%, var(--color-maroon-deep) 100%);
+  color: #FFFDF9;
+  border: 1px solid var(--color-gold-antique);
+  box-shadow: 0 4px 14px rgba(90, 11, 21, 0.25);
+  font-family: var(--font-sans-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-traditional-primary:hover {
+  background: linear-gradient(135deg, var(--color-maroon-rich) 0%, var(--color-maroon-primary) 100%);
+  box-shadow: 0 6px 18px rgba(90, 11, 21, 0.35);
+  color: #FFFFFF;
+}
+
+.btn-traditional-secondary {
+  background: transparent;
+  color: var(--color-maroon-primary);
+  border: 1.5px solid var(--color-maroon-primary);
+  font-family: var(--font-sans-ui);
+}
+
+.btn-traditional-secondary:hover {
+  background: var(--color-cream-tint);
+}
+
+/* ----------------------------------------------------------------------------
+ * 6. COUNTDOWN TIMER IN TRADITIONAL STYLE
+ * ---------------------------------------------------------------------------- */
+.theme-traditional .countdown-unit-box {
+  background-color: #FAF5EA;
+  border: 1px solid rgba(197, 155, 39, 0.35);
+  color: var(--color-maroon-primary);
+}
+
+.theme-traditional .countdown-number {
+  color: var(--color-maroon-deep);
+  font-family: var(--font-serif-heading);
+}
+
+.theme-traditional .countdown-title {
+  color: var(--color-gold-dark);
+  font-family: var(--font-sans-ui);
+  font-weight: 600;
+}
+
+/* ----------------------------------------------------------------------------
+ * 7. FOOTER & FAMILY RSVP
+ * ---------------------------------------------------------------------------- */
+.traditional-footer {
+  background: linear-gradient(180deg, var(--color-maroon-primary) 0%, var(--color-maroon-deep) 100%);
+  color: #FFFDF9;
+  text-align: center;
+  padding: 2.5rem 1.25rem 2rem;
+  border-top: 3px solid var(--color-gold-antique);
+}
+
+.traditional-footer-closing {
+  font-family: var(--font-serif-heading);
+  font-size: 1.15rem;
+  color: var(--color-gold-bright);
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.traditional-contact-list {
+  list-style: none;
+  margin: 1.25rem auto;
+  max-width: 380px;
+  font-family: var(--font-sans-ui);
+  font-size: 0.95rem;
+}
+
+.traditional-contact-item {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(245, 215, 127, 0.2);
+}
+
+.traditional-contact-phone {
+  color: var(--color-gold-bright);
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 0.4rem;
+}
